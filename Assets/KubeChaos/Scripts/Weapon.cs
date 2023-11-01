@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
     public float bulletSpeed = 12f;
     public float weaponFireRate = 0.07f;
     public float bulletRandomness = 0f;
-    public bool useGamepadController = false;
+    public bool useGamepadController = true;
 
     /// <summary>
     /// The aim angle the weapon system is currently at in radians.

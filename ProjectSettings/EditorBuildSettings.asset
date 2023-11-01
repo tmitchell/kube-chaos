@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/KubeChaos/Scenes/Node.unity
     guid: 8a80ea33360c595459b7d41585ea7330
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 9d93bfd4f6231e340a8a49201b074180,
+    com.unity.input.settings: {fileID: 11400000, guid: 35e38a8254a0cbeb6a35ca1ca56b0ed2,
       type: 2}

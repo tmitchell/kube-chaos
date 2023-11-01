@@ -68,7 +68,7 @@ public class NodeManager : MonoBehaviour
 
     private void GetRunningPodInfo()
     {
-        pods = ExecKubeCtl($"pods -n {KubeManager.Instance.kubeNamespace} --no-headers --field-selector spec.nodeName={nodeName},status.phase=Running -o custom-columns=name:.metadata.name,ns:.metadata.namespace,rs:.metadata.ownerReferences[0].name");
+        pods = ExecKubeCtl($"pods -A --no-headers --field-selector spec.nodeName={nodeName},status.phase=Running -o custom-columns=name:.metadata.name,ns:.metadata.namespace,rs:.metadata.ownerReferences[0].name");
         podListReady = true;
     }
 
