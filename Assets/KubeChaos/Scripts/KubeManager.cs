@@ -10,9 +10,9 @@ public class KubeManager : MonoBehaviour
     // Quick and dirty singleton instance
     public static KubeManager Instance;
 
-    public string kubeContextName = "kubernetes-admin@kubernetes";
-    public string kubeNamespace = "demo";
-    public string kubectlExecutableName = "kubectl.exe";
+    public string kubeContextName = "default";
+    public string kubeNamespace = "structsure";
+    public string kubectlExecutableName = "/usr/local/bin/kubectl";
     public string currentNode;
     public string[] nodes;
     public GameObject nodePrefab;
@@ -50,6 +50,7 @@ public class KubeManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         var joystickNames = Input.GetJoystickNames();
+        UnityEngine.Debug.Log("Joystick names: " + joystickNames);
         if (joystickNames.Length > 0)
         {
             joystickEnabled = true;

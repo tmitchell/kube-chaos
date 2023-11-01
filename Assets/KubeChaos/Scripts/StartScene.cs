@@ -11,9 +11,9 @@ public class StartScene : MonoBehaviour
 
     private void Start()
     {
-        namespaceInput.text = "demo";
-        kubectlExecutableInput.text = "kubectl";
-        contextInput.text = "kubernetes-admin@kubernetes";
+        namespaceInput.text = "structsure";
+        kubectlExecutableInput.text = "/usr/bin/kubectl";
+        contextInput.text = "default";
     }
 
     public void StartGame()
@@ -32,5 +32,13 @@ public class StartScene : MonoBehaviour
         KubeManager.Instance.gameStarted = true;
         
         SceneManager.LoadScene("KubeMainScene");
+    }
+
+    public void Update()
+    {
+        if (Input.GetButton("Submit"))
+        {
+            StartGame();
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 /// <summary>
 /// A very quickly hacked together dual analog stick style movement script.
 /// </summary>
@@ -24,6 +25,7 @@ public class Move : MonoBehaviour
     private float lastAimAngle;
     public Vector2 direction;
 
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,6 +38,7 @@ public class Move : MonoBehaviour
     {
         currentXRamp = 0f;
         currentYRamp = 0f;
+
     }
 
     Vector3 AngleLerp(Vector3 StartAngle, Vector3 FinishAngle, float t)
@@ -52,6 +55,7 @@ public class Move : MonoBehaviour
     {
         var inputX = Input.GetAxis("Horizontal");
         var inputY = Input.GetAxis("Vertical");
+
 
         var posInputX = Mathf.Abs(inputX);
         var posInputY = Mathf.Abs(inputY);
@@ -132,7 +136,7 @@ public class Move : MonoBehaviour
 
         if (rampUpTimeHoriz < 0f) rampUpTimeHoriz = 0f;
         if (rampUpTimeVert < 0f) rampUpTimeVert = 0f;
-
+        
     }
 
     private IEnumerator Rotation()
